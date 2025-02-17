@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Product Sans";
+  src: url(./assets/fonts/ProductSans/ProductSans-Regular.woff2)
+      format("woff2"),
+    url(./assets/fonts/ProductSans/ProductSans-Regular.woff) format("woff");
+  font-weight: 400;
+}
+
+:root {
+  font-family: 'Product Sans', system-ui;
+
+  /* font-synthesis: none; */
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

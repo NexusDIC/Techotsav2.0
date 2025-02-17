@@ -1,0 +1,115 @@
+:root {
+  --bg-clr: #ededed;
+  --font-clr: #000;
+
+  --google-red: #ea4335;
+  --google-blue: #4285f4;
+  --google-green: #34a853;
+  --google-yellow: #f9ab00;
+
+  --container-clr: #c0c0c07e;
+}
+
+.Logo_logoRedPart__QJGXu {
+  fill: var(--google-red);
+  transition: all 0.5s ease-in-out;
+}
+
+.Logo_logoGreenPart__LnIju {
+  fill: var(--google-green);
+  transition: all 0.5s ease-in-out;
+}
+
+.Logo_logoYellowPart__AVkWI {
+  fill: var(--google-yellow);
+  transition: all 0.5s ease-in-out;
+}
+
+.Logo_logoBluePart__Gg0LP {
+  fill: var(--google-blue);
+  transition: all 0.5s ease-in-out;
+}
+
+[data-theme="dark"] {
+  --bg-clr: #000;
+  --font-clr: #fff;
+  --container-clr: #5c5c5c7e;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(
+    linear,
+    40% 0%,
+    75% 84%,
+    from(#4d9c41),
+    to(#19911d),
+    color-stop(0.6, #54de5d)
+  );
+}
+
+body {
+  background-color: var(--bg-clr);
+  color: var(--font-clr);
+  overflow-x: hidden;
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: var(--google-blue);
+  border: 2px solid var(--font-clr);
+  color: var(--bg-clr);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--google-green);
+  color: var(--bg-clr);
+}
+
+.layout > .container {
+  position: relative;
+  background-color: var(--container-clr);
+  backdrop-filter: blur(10px);
+  border-radius: 0.5rem;
+  transition: all 0.1s ease-in-out;
+  padding: 1rem 1rem;
+  margin: 0;
+}
+
+#b,
+#d {
+  padding: 0;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__container__vertical {
+  display: flex;
+  flex-direction: column;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
