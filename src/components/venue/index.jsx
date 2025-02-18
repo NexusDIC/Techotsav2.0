@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function Venue() {
   return (
     <div className="flex items-center justify-center flex-col h-full w-full">

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
@@ -59,87 +60,59 @@ export default function Schedule() {
 
   const schedule = [
     {
-      time: "09:30 a.m. – 10:30 a.m",
-      event: "Registration and Kickoff",
+      time: "09:00 a.m. – 10:00 a.m",
+      event: "Registration",
       speakers: [],
     },
     {
-      time: "10:30 a.m. – 10:40 a.m",
-      event: "Inauguration",
+      time: "10:00 a.m. – 10:15 a.m",
+      event: "Lamp Lighting & Welcome ",
       speakers: [],
     },
     {
-      time: "10:40 a.m. – 11:00 a.m",
-      event: "Guest Welcome / Lightning of Lamp",
+      time: "10:15 a.m. – 11:00 a.m",
+      event: "Keynote Session 1",
       speakers: [],
     },
     {
-      time: "11:00 a.m. – 11:30 a.m",
-      event: "Keynote 1: Role of AI to bridge industry academia gap",
-      speakers: [["Mr. Arvind Kumar",arvind]],
-    },
-    {
-      time: "11:30 a.m. – 12:00 p.m",
-      event: "Keynote 2: Cyber Security",
-      speakers: [["Dr. Rizwan Ahmed", rizAhmed]],
-    },
-    { time: "12:00 p.m. – 12:30 p.m", event: "Keynote 3", speakers: [["Mr. Amit Kale",amitKale ]] },
-    {
-      time: "12:30 p.m. – 1:15 p.m",
-      event:
-        "Panel Discussion 1: Generative AI in Industry And academic research",
+      time: "11:00 a.m. – 11:45 a.m",
+      event: "Keynote 2",
       speakers: [
-        ["Mr. Aniruddha Kalbande", AniKal],
+        /* ["Mr. Arvind Kumar", arvind] */
+      ],
+    },
+    {
+      time: "11:45 a.m. – 12:30 p.m",
+      event: "Panel Discussion 1",
+      speakers: [
+        /* ["Dr. Rizwan Ahmed", rizAhmed] */
+      ],
+    },
+    {
+      time: "12:30 p.m. – 01:15 p.m",
+      event: "Lunch & Networking Break",
+      speakers: [
+        /* ["Mr. Amit Kale", amitKale] */
+      ],
+    },
+    {
+      time: "01:15 p.m. – 04:15 p.m",
+      event: "Hackathon, Workshop 1 and Workshop 2 ",
+      speakers: [
+        /* ["Mr. Aniruddha Kalbande", AniKal],
         ["Mr. Arvind Kumar", arvind],
         ["Mr. Rizwan Ahmed", rizAhmed],
         ["Mr. Amit Kale", amitKale],
         ["Mr. Shrikant Ardhapurkar", ShriArdha],
-        ["Mr. Sachin Untawale", sachinUntawale],
+        ["Mr. Sachin Untawale", sachinUntawale], */
       ],
     },
-    { time: "01:15 p.m. – 02:00 p.m", event: "Networking Lunch", speakers: [] },
+    { time: "04:15 p.m. – 04:30 p.m", event: "Hi-Tea Break", speakers: [] },
     {
-      time: "02:00 p.m. – 02:30 p.m",
-      event: "Technical Treasure Hunt / Jamming Session",
+      time: "04:30 p.m. – 05:15 p.m",
+      event: "Panel Discussion 2",
       speakers: [],
     },
-    {
-      time: "02:30 p.m. – 03:00 p.m",
-      event: "Placement Training / Resume Building",
-      speakers: [["Mr. Maneesh Nair", maneeshNair]],
-    },
-    {
-      time: "03:00 p.m. – 03:30 p.m",
-      event: "Speaker Session 1: How to Enter, and Exit the AI Chakravyu",
-      speakers: [["Mr. Akshay Zadgaonkar", AksZad]],
-    },
-    {
-      time: "03:30 p.m. – 04:00 p.m",
-      event: "Speaker Session 2: Impact of Salesforce on Process Automation",
-      speakers: [["Mr. Akash Singh", akashS]],
-    },
-    {
-      time: "04:00 p.m. – 04:30 p.m",
-      event: "Speaker Session 3",
-      speakers: [
-        ["Mr. Ramakrishna R", ramaR],
-        ["Mr. Ashutosh Shivhare", ashutoshShivhare],
-      ],
-    },
-    {
-      time: "04:30 p.m. – 05:00 p.m",
-      event:
-        "Panel Discussion 2: Current IT market Scenario and Job Readiness to technocrats",
-      speakers: [
-        ["Mr. Shivam Joshi", ShivJo],
-        ["Mr. Akshay Zadgaonkar", AksZad],
-        ["Mr. Aakash Singh", akashS],
-        ["Mr. Ramakrishna R", ramaR],
-        ["Mr. Ashutosh Shivhare", ashutoshShivhare],
-        ["Mr. Vishnu Pillai", vishnuPillai],
-      ],
-    },
-    { time: "05:00 p.m. – 06:00 p.m", event: "Valedictory", speakers: [] },
   ];
 
   const colors = ["#EA4335", "#4285F4", "#FBBC05", "#2ECC71"];
@@ -439,6 +412,11 @@ export default function Schedule() {
                 </div> */}
               </div>
             </div>
+            <h1
+              style={{ fontSize: "30px", textAlign: "center", padding: "5px" }}
+            >
+              End of Day 1
+            </h1>
           </dir>
         </Box>
       </Modal>
