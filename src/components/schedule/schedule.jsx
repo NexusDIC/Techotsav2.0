@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaArrowRight } from "react-icons/fa";
@@ -54,66 +54,111 @@ const largeStyle = {
 };
 
 export default function Schedule() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [selectedDay, setSelectedDay] = useState("day1");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const schedule = [
-    {
-      time: "09:00 a.m. – 10:00 a.m",
-      event: "Registration",
-      speakers: [],
-    },
-    {
-      time: "10:00 a.m. – 10:15 a.m",
-      event: "Lamp Lighting & Welcome ",
-      speakers: [],
-    },
-    {
-      time: "10:15 a.m. – 11:00 a.m",
-      event: "Keynote Session 1",
-      speakers: [],
-    },
-    {
-      time: "11:00 a.m. – 11:45 a.m",
-      event: "Keynote 2",
-      speakers: [
-        /* ["Mr. Arvind Kumar", arvind] */
-      ],
-    },
-    {
-      time: "11:45 a.m. – 12:30 p.m",
-      event: "Panel Discussion 1",
-      speakers: [
-        /* ["Dr. Rizwan Ahmed", rizAhmed] */
-      ],
-    },
-    {
-      time: "12:30 p.m. – 01:15 p.m",
-      event: "Lunch & Networking Break",
-      speakers: [
-        /* ["Mr. Amit Kale", amitKale] */
-      ],
-    },
-    {
-      time: "01:15 p.m. – 04:15 p.m",
-      event: "Hackathon, Workshop 1 and Workshop 2 ",
-      speakers: [
-        /* ["Mr. Aniruddha Kalbande", AniKal],
+  const schedule = {
+    day1: [
+      {
+        time: "09:00 a.m. – 10:00 a.m",
+        event: "Registration",
+        speakers: [],
+      },
+      {
+        time: "10:00 a.m. – 10:15 a.m",
+        event: "Lamp Lighting & Welcome ",
+        speakers: [],
+      },
+      {
+        time: "10:15 a.m. – 11:00 a.m",
+        event: "Keynote Session 1",
+        speakers: [],
+      },
+      {
+        time: "11:00 a.m. – 11:45 a.m",
+        event: "Keynote 2",
+        speakers: [
+          /* ["Mr. Arvind Kumar", arvind] */
+        ],
+      },
+      {
+        time: "11:45 a.m. – 12:30 p.m",
+        event: "Panel Discussion 1",
+        speakers: [
+          /* ["Dr. Rizwan Ahmed", rizAhmed] */
+        ],
+      },
+      {
+        time: "12:30 p.m. – 01:15 p.m",
+        event: "Lunch & Networking Break",
+        speakers: [
+          /* ["Mr. Amit Kale", amitKale] */
+        ],
+      },
+      {
+        time: "01:15 p.m. – 04:15 p.m",
+        event: "Hackathon, Workshop 1 and Workshop 2 ",
+        speakers: [
+          /* ["Mr. Aniruddha Kalbande", AniKal],
         ["Mr. Arvind Kumar", arvind],
         ["Mr. Rizwan Ahmed", rizAhmed],
         ["Mr. Amit Kale", amitKale],
         ["Mr. Shrikant Ardhapurkar", ShriArdha],
         ["Mr. Sachin Untawale", sachinUntawale], */
-      ],
-    },
-    { time: "04:15 p.m. – 04:30 p.m", event: "Hi-Tea Break", speakers: [] },
-    {
-      time: "04:30 p.m. – 05:15 p.m",
-      event: "Panel Discussion 2",
-      speakers: [],
-    },
-  ];
+        ],
+      },
+      { time: "04:15 p.m. – 04:30 p.m", event: "Hi-Tea Break", speakers: [] },
+      {
+        time: "04:30 p.m. – 05:15 p.m",
+        event: "Panel Discussion 2",
+        speakers: [],
+      },
+    ],
+    day2: [
+      {
+        time: "09:00 a.m. – 09:30 a.m",
+        event: "Day 2 Registration & Entry",
+        speakers: [],
+      },
+      {
+        time: "09:30 a.m. – 12:30 a.m",
+        event: "Hackathon / Workshop 3 & 4",
+        speakers: [],
+      },
+      {
+        time: "12:30 a.m. – 01:15 p.m",
+        event: "Lunch Break",
+        speakers: [],
+      },
+      {
+        time: "01:15 p.m. – 02:00 p.m",
+        event: "Employability Skills & Career Talk",
+        speakers: [],
+      },
+      {
+        time: "02:00 p.m. – 02:45 p.m",
+        event: "Entrepreneurship Session",
+        speakers: [],
+      },
+      {
+        time: "02:45 p.m. – 03:30 p.m",
+        event: "Panel Discussion 3",
+        speakers: [],
+      },
+      {
+        time: "03:30 p.m. – 04:15 p.m",
+        event: "Memory Trainer Session",
+        speakers: [],
+      },
+      {
+        time: "04:15 p.m. – 05:30 p.m",
+        event: "Event Wrap-Up",
+        speakers: [],
+      },
+    ],
+  };
 
   const colors = ["#EA4335", "#4285F4", "#FBBC05", "#2ECC71"];
 
@@ -158,60 +203,84 @@ export default function Schedule() {
 
             <div className="w-12/12 md:w-7/12 lg:6/12 mx-auto relative ">
               <div className="border-l-2 border-[var(--font-clr)] mt-10">
-                {schedule.map((item, index) => (
-                  <div
-                    key={index}
-                    className={`transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[${
-                      colors[index % 4]
-                    }] border-2 border-[${
-                      colors[index % 4]
-                    }] bg-opacity-40 rounded-2xl md:rounded-xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0`}
+                {/* bruhhhhh */}
+                <div className="flex justify-center space-x-4 mt-4">
+                  <button
+                    onClick={() => setSelectedDay("day1")}
+                    className={`px-4 py-2 rounded-lg text-2xl ${
+                      selectedDay === "day1"
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-700"
+                    }`}
                   >
+                    Day 1
+                  </button>
+                  <button
+                    onClick={() => setSelectedDay("day2")}
+                    className={`px-4 py-2 rounded-lg text-2xl ${
+                      selectedDay === "day2"
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-700"
+                    }`}
+                  >
+                    Day 2
+                  </button>
+                </div>
+                <div className="mt-6">
+                  {schedule[selectedDay].map((item, index) => (
                     <div
-                      className={`w-5 h-5 bg-[${
+                      key={index}
+                      className={`transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[${
                         colors[index % 4]
-                      }] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0`}
-                    ></div>
-
-                    <div
-                      className={`w-10 h-1 bg-[${
+                      }] border-2 border-[${
                         colors[index % 4]
-                      }] absolute -left-10 z-0`}
-                    ></div>
+                      }] bg-opacity-40 rounded-2xl md:rounded-xl mb-10 flex-col md:flex-row space-y-4 md:space-y-0`}
+                    >
+                      <div
+                        className={`w-5 h-5 bg-[${
+                          colors[index % 4]
+                        }] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0`}
+                      ></div>
+                      <div
+                        className={`w-10 h-1 bg-[${
+                          colors[index % 4]
+                        }] absolute -left-10 z-0`}
+                      ></div>
 
-                    <div className="flex-auto w-full">
-                      <h4 className="text-base">{item.time}</h4>
-                      <h1 className="text-xl font-[500] capitalize">
-                        {item.event}
-                      </h1>
-                      {item.speakers.length > 0 && (
-                        <div className="flex mt-2 gap-2 flex-wrap">
-                          {item.speakers.map((speaker, j) => (
-                            <div
-                              key={j}
-                              className={`bg-[var(--bg-clr)] border-2 border-[${
-                                colors[index % 4]
-                              }] px-2 py-2 rounded-full flex items-center gap-2`}
-                            >
+                      <div className="flex-auto w-full">
+                        <h4 className="text-base">{item.time}</h4>
+                        <h1 className="text-xl font-[500] capitalize">
+                          {item.event}
+                        </h1>
+                        {item.speakers.length > 0 && (
+                          <div className="flex mt-2 gap-2 flex-wrap">
+                            {item.speakers.map((speaker, j) => (
                               <div
-                                className={`h-8 aspect-square rounded-full border-2 border-[${
+                                key={j}
+                                className={`bg-[var(--bg-clr)] border-2 border-[${
                                   colors[index % 4]
-                                } inline`}
+                                }] px-2 py-2 rounded-full flex items-center gap-2`}
                               >
-                                <img
-                                  src={speaker[1]}
-                                  alt={speaker[0]}
-                                  className="h-full w-full object-cover rounded-full"
-                                />
+                                <div
+                                  className="{`h-8 aspect-square rounded-full border-2 border-[${
+                                  colors[index % 4]
+                                } inline`}"
+                                >
+                                  <img
+                                    src={speaker[1]}
+                                    alt={speaker[0]}
+                                    className="h-full w-full object-cover rounded-full"
+                                  />
+                                </div>
+                                {speaker[0]}
                               </div>
-                              {speaker[0]}
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
                 {/* <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[#EA4335] border-2 border-[#EA4335] bg-opacity-40 rounded-2xl md:rounded-full mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
                   <div className="w-5 h-5 bg-[#EA4335] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0"></div>
 
@@ -417,7 +486,7 @@ export default function Schedule() {
               className="cursor-default"
               style={{ fontSize: "30px", textAlign: "center", padding: "5px" }}
             >
-              End of Day 1
+              {selectedDay == "day1" ? "End of Day 1" : "Event Concluded"}
             </h1>
           </dir>
         </Box>
