@@ -8,7 +8,11 @@ export default function Logo() {
         className="border-none bg-transparent hover:border-none hover:bg-transparent"
       >
         <div className="flex justify-center align-middle gap-2 ">
-          <img src={NEXUS_LOGO} alt="Nexus Logo" className="h-20" />
+          <img
+            src={NEXUS_LOGO}
+            alt="Nexus Logo"
+            className="h-20 rounded-full"
+          />
           <div className="names">
             <h2>Nexus Forum</h2>
             <h2>DIC Department</h2>
