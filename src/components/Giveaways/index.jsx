@@ -1,4 +1,3 @@
-import React from "react";
 import "./Giveaways.css";
 
 export default function Giveaways() {
