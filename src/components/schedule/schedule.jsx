@@ -150,6 +150,7 @@ export default function Schedule() {
               <GiCancel />
             </button>
             <h1
+              className="cursor-default"
               style={{ fontSize: "30px", textAlign: "center", padding: "5px" }}
             >
               Schedule
@@ -413,6 +414,7 @@ export default function Schedule() {
               </div>
             </div>
             <h1
+              className="cursor-default"
               style={{ fontSize: "30px", textAlign: "center", padding: "5px" }}
             >
               End of Day 1
