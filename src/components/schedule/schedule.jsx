@@ -109,7 +109,7 @@ export default function Schedule() {
         ["Mr. Sachin Untawale", sachinUntawale], */
         ],
       },
-      { time: "04:15 p.m. – 04:30 p.m", event: "Hi-Tea Break", speakers: [] },
+      { time: "04:15 p.m. – 04:30 p.m", event: "High-Tea Break", speakers: [] },
       {
         time: "04:30 p.m. – 05:15 p.m",
         event: "Panel Discussion 2",
@@ -119,7 +119,7 @@ export default function Schedule() {
     day2: [
       {
         time: "09:00 a.m. – 09:30 a.m",
-        event: "Day 2 Registration & Entry",
+        event: "Registration & Entry",
         speakers: [],
       },
       {

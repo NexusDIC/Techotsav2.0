@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { IoMdMoon } from "react-icons/io";
 import { MdSunny } from "react-icons/md";
 import { DarkModeContext } from "../../contexts/DarkMode";
