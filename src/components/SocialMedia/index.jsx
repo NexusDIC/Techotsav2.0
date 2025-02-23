@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { FaInstagram, FaYoutube, FaLinkedin, FaDiscord } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 import ThemeToggler from "../ThemeToggler";
 
 export default function SocialMedia() {
@@ -21,7 +20,7 @@ export default function SocialMedia() {
           <FaLinkedin />
         </a>
 
-        <ThemeToggler />
+        {/*  <ThemeToggler /> */}
       </div>
     </>
   );

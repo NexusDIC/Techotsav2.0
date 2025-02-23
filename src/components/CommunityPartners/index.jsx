@@ -39,7 +39,7 @@ export default function CommunityPartners() {
     {
       image: COE_ARVR,
       alt: "COE_ARVR",
-      bg: "w",
+      bg: "b",
     },
     {
       image: COE_DIGITECH,
@@ -49,12 +49,12 @@ export default function CommunityPartners() {
     {
       image: COE_MLR,
       alt: "COE_MLR",
-      bg: "w",
+      bg: "b",
     },
     {
       image: COE_CLOUDTECH,
       alt: "COE_CLOUDTECH",
-      bg: "w",
+      bg: "b",
     },
   ];
 
