@@ -87,7 +87,7 @@ body {
 .layout > .container {
   position: relative;
   background-color: var(--container-clr);
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
   border-radius: 0.5rem;
   transition: all 0.1s ease-in-out;
   padding: 1rem 1rem;
