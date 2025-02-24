@@ -35,7 +35,7 @@ export default function Timer() {
   return (
     <div className="hero w-full h-full flex flex-col items-center justify-center">
       <h3>Time Left Till Event : </h3>
-      <p className="select-none text-4xl font-bold bg-gradient-to-r from-[var(--google-red)] via-[var(--google-blue)] via-[var(--google-yellow)] to-[var(--google-green)] inline-block text-transparent bg-clip-text">
+      <p className="select-none text-4xl font-bold bg-gradient-to-r from-[#F3DE8A] via-[#B0E0E6] to-[#71C73B] to-[#FF5A36] inline-block text-transparent bg-clip-text">
         {days !== undefined ? `${days}:` : ""}
         {hours !== undefined ? `${hours.toString().padStart(2, "0")}:` : "00:"}
         {minutes !== undefined

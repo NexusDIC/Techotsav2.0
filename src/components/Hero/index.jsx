@@ -107,27 +107,26 @@ export default function Hero() {
             <div className="text-justify">
               <ul className="list-disc space-y-4">
                 <li>
-                  Techotsav 2.0 is an amazing opportunity to explore the
-                  constantly changing world of technology that you don&apos;t
-                  want to miss. It doesn&apos;t matter if you&apos;re an
-                  experienced programmer, a new enthusiast, or just excited by
-                  the endless possibilities of tech, this event is designed
-                  especially for you.
+                  Techotsav2.0 is an amazing opportunity to explore the constant
+                  change in the world of technology, that you don&apos;t want to
+                  miss. It doesn&apos;t matter if you&apos;re an experienced
+                  programmer, a new enthusiast, or just excited by the endless
+                  possibilities of tech, this event is designed especially for
+                  you.
                 </li>
                 <li>
-                  Techotsav 2.0 is a Tech day that brings young developers, tech
-                  enthusiasts, industry experts and students from different
-                  parts of Nagpur to learn, share, and collaborate on various
-                  topics and dive deep into the world of programming languages,
-                  decode the mysteries of AI, and venture into the realms of
-                  machine learning and leave with a treasure trove of knowledge
-                  and newfound skills ready to conquer the tech universe.
+                  Techotsav 2.0 brings young developers, tech enthusiasts,
+                  industry experts and students from different parts of Nagpur
+                  to learn, share, and collaborate on various topics and dive
+                  deep into the world of programming languages, decode the
+                  mysteries of AI, and venture into the realms of machine
+                  learning and leave with a treasure trove of knowledge and
+                  newfound skills ready to conquer the tech universe.
                 </li>
                 <li>
-                  Techotsav 2.0 attendees get a chance to explore networking
-                  opportunities, and foster knowledge exchange and skill
-                  development with the tech community, developers, industry
-                  experts,and profound Speakers.
+                  Here attendees will get a chance to network with the industry
+                  experts and foster knowledge and exchange skills with the tech
+                  community, developers, industry experts,and profound Speakers.
                 </li>
               </ul>
               <div className="flex flex-wrap justify-center text-center my-8 gap-4">
