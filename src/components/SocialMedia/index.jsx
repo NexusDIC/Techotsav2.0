@@ -20,7 +20,7 @@ export default function SocialMedia() {
           <FaLinkedin />
         </a>
 
-        {/*  <ThemeToggler /> */}
+        <ThemeToggler />
       </div>
     </>
   );
