@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaArrowRight } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
+import "./style.css";
 
 import rizAhmed from "../../assets/images/speakers/Dr_Rizwan_Ahmed.jpeg";
 import ShriArdha from "../../assets/images/speakers/Shrikant_Ardhapurkar.jpeg";
@@ -78,7 +79,7 @@ export default function Schedule() {
       },
       {
         time: "11:00 a.m. – 11:45 a.m",
-        event: "Keynote 2",
+        event: "Keynote Session 2",
         speakers: [
           /* ["Mr. Arvind Kumar", arvind] */
         ],
@@ -99,7 +100,7 @@ export default function Schedule() {
       },
       {
         time: "01:15 p.m. – 04:15 p.m",
-        event: "Hackathon, Workshop 1 and Workshop 2 ",
+        event: "Workshop 1 and Workshop 2 ",
         speakers: [
           /* ["Mr. Aniruddha Kalbande", AniKal],
         ["Mr. Arvind Kumar", arvind],
@@ -115,20 +116,25 @@ export default function Schedule() {
         event: "Panel Discussion 2",
         speakers: [],
       },
+      {
+        time: "05:15 p.m. – 05:30 p.m",
+        event: "Conclusion of Day 1",
+        speakers: [],
+      },
     ],
     day2: [
       {
         time: "09:00 a.m. – 09:30 a.m",
-        event: "Registration & Entry",
+        event: "Entry",
         speakers: [],
       },
       {
-        time: "09:30 a.m. – 12:30 a.m",
-        event: "Hackathon / Workshop 3 & 4",
+        time: "09:30 a.m. – 12:30 p.m",
+        event: "Workshop 3 & 4",
         speakers: [],
       },
       {
-        time: "12:30 a.m. – 01:15 p.m",
+        time: "12:30 p.m. – 01:15 p.m",
         event: "Lunch Break",
         speakers: [],
       },
@@ -230,7 +236,7 @@ export default function Schedule() {
                   {schedule[selectedDay].map((item, index) => (
                     <div
                       key={index}
-                      className={`transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[${
+                      className={` blocks transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[${
                         colors[index % 4]
                       }] border-2 border-[${
                         colors[index % 4]
