@@ -1,10 +1,11 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import { FaArrowRight } from "react-icons/fa";
 import { GiCancel } from "react-icons/gi";
 import "./style.css";
+import { motion, useInView, useAnimation } from "framer-motion";
 
 import rizAhmed from "../../assets/images/speakers/Dr_Rizwan_Ahmed.jpeg";
 import ShriArdha from "../../assets/images/speakers/Shrikant_Ardhapurkar.jpeg";
@@ -19,6 +20,7 @@ import maneeshNair from "../../assets/images/speakers/maneesh.png";
 import arvind from "../../assets/images/speakers/arvind.png";
 import ramaR from "../../assets/images/speakers/RamaR.jpg";
 import amitKale from "../../assets/images/speakers/AmitKale.jpg";
+import { Hidden } from "@mui/material";
 
 const style = {
   position: "absolute",
@@ -55,10 +57,19 @@ const largeStyle = {
 };
 
 export default function Schedule() {
+  const blocksRef = useRef(null);
+  const isInView = useInView(blocksRef, { once: true });
   const [open, setOpen] = useState(false);
   const [selectedDay, setSelectedDay] = useState("day1");
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
 
   const schedule = {
     day1: [
@@ -234,8 +245,16 @@ export default function Schedule() {
                 </div>
                 <div className="mt-6">
                   {schedule[selectedDay].map((item, index) => (
-                    <div
+                    <motion.div
+                      variants={{
+                        hidden: { opacity: 0, y: 100 },
+                        visible: { opacity: 1, y: 0 },
+                      }}
+                      initial="hidden"
+                      animate={mainControls}
+                      transition={{ duration: 0.5 }}
                       key={index}
+                      ref={blocksRef}
                       className={` blocks transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[${
                         colors[index % 4]
                       }] border-2 border-[${
@@ -284,7 +303,7 @@ export default function Schedule() {
                           </div>
                         )}
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
                 {/* <div className="transform transition cursor-pointer hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 bg-[#EA4335] border-2 border-[#EA4335] bg-opacity-40 rounded-2xl md:rounded-full mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
